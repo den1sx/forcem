@@ -1,0 +1,59 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Главная страница'
+	- var pageClass = 'index-page';
+
+block content
+	.b-title.title-1.container Сертификаты
+	.b-breadcrumbs.container 123
+	.certificates
+		.container
+			.b-text.b-text--paste Любой человек может приобрести у нас сертификат сроком на 3 мес. 6 мес. 9 мес. 12 мес. на оказание юридических услуг, который можно подарить (передать) друзьям, родным, знакомым. Ознакомиться с тем, какие услуги включены  в данные сертификаты, можно ниже.
+		.b-offer.container
+			.b-offer__title.title-2 Сертификаты и спецпредложения
+			.b-offer__text Любой человек может приобрести у нас «сертификат» сроком на 3 мес. 6 мес. 9 мес. 12 мес. на оказание юридических услуг, который можно подарить (передать) друзьям, родным, знакомым.
+			.b-offer__items
+				.b-offer__item.bgi
+					.b-tariff
+						.b-tariff__title.title-4 Эконом
+						.b-tariff__text 3 месяца оказания <br>юридических услуг
+						.b-tariff__worth.title-3 5 000 руб.
+						.b-tariff__more.link подробнее
+				.b-offer__item.bgi
+					.b-tariff
+						.b-tariff__title.title-4 Премьер
+						.b-tariff__text 6 месяцев оказания <br>юридических услуг
+						.b-tariff__worth.title-3 10 000 руб.
+						.b-tariff__more.link подробнее
+				.b-offer__item.bgi
+					.b-tariff
+						.b-tariff__title.title-4 Престиж
+						.b-tariff__text 9 месяцев оказания <br>юридических услуг
+						.b-tariff__worth.title-3 15 000 руб.
+						.b-tariff__more.b-tariff__more--active.link подробнее
+				.b-offer__item.bgi
+					.b-tariff
+						.b-tariff__title.title-4 Президент
+						.b-tariff__text 12 месяцев оказания <br>юридических услуг
+						.b-tariff__worth.title-3 20 000 руб.
+						a(href="#").b-tariff__more.link подробнее
+			a(href="#").b-offer__more.link Все предложения
+		.container#certificates__card
+			.b-text.b-text--paste.b-text__marker.b-text__marker--active
+				p текст 1
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae in, eum! Qui quam obcaecati quas, in sit neque reiciendis quia consequatur, et aliquid consectetur officiis?
+			.b-text.b-text--paste.b-text__marker 
+				p текст 2
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae in, eum! Qui quam obcaecati quas, in sit neque reiciendis quia consequatur, et aliquid consectetur officiis?
+			.b-text.b-text--paste.b-text__marker 
+				p текст 3
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae in, eum! Qui quam obcaecati quas, in sit neque reiciendis quia consequatur, et aliquid consectetur officiis?
+			.b-text.b-text--paste.b-text__marker 
+				p текст 4
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae in, eum! Qui quam obcaecati quas, in sit neque reiciendis quia consequatur, et aliquid consectetur officiis?
+		.b-more.container
+			.b-more__item.link Заказать сертефикат
+block script
+	script(src="js/slider.js")
+	

@@ -1,0 +1,42 @@
+.b-card {
+	display: flex;
+	flex-direction: column;
+
+	&__list {
+		margin-top: 17px;
+	}
+
+	&__more {
+		margin-top: 20px;
+		padding-right: 74px;
+		position: relative;
+		display: inline-block;
+		align-self: flex-end;
+		text-transform: uppercase;
+		color: $blackh;
+
+		@include breakpoint($mobile) {
+	    	padding-right: 66px;
+	    	margin-top: 20px;
+	    }
+
+		&:hover {
+
+			&::after {
+				right: 7px;
+			}
+		}
+
+		&::after {
+			transition: ease 0.5s;
+			content: '';
+			position: absolute;	
+			top: 12px;
+			right: 0px;
+			width: 54px;
+			height: 2px;	
+			background-color: $red;	
+
+		}
+	}
+}

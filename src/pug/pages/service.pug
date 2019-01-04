@@ -1,0 +1,57 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Главная страница'
+	- var pageClass = 'index-page';
+
+block content
+	.b-hat
+		.b-hat__bgi.bgi(style="background-image: url(img/category/semeynoe.png);")
+		.b-hat__pic
+			.b-hat__icon.bgi(style="background-image: url(img/category/semeynoe.png);")
+		h1.b-hat__title.title-1 Семейное право sad
+	.b-breadcrumbs.container 123
+	.container
+		.b-text.b-text--category
+			h2 Заголовок<br>
+			p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pretium dolor nibh, euismod rhoncus neque posuere at. Fusce bibendum lacus vel erat ultricies, vel commodo orci cursus. Suspendisse ut lobortis tellus. Etiam nec mi non sapien eleifend varius non in eros. Mauris iaculis metus orci, a fringilla nisi iaculis sed. Nunc pharetra enim nec volutpat aliquam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam arcu erat, efficitur sed libero non, tempus venenatis nunc.<br><br>Nullam vitae ullamcorper sem, sit amet tempus libero. In egestas, lorem ut porta rutrum, sapien mi convallis libero, sed convallis nibh mi quis augue. Sed ultrices aliquet ex eu vestibulum. Curabitur in bibendum nunc. Sed lacinia suscipit aliquam. Suspendisse volutpat magna et tortor .<br>
+			h3 Заголовок
+			p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pretium dolor nibh, euismod rhoncus neque posuere at. Fusce bibendum lacus vel erat ultricies, vel commodo orci cursus. Suspendisse ut lobortis tellus. Etiam nec mi non sapien eleifend varius non in eros. Mauris iaculis metus orci, a fringilla nisi iaculis sed. Nunc pharetra enim nec volutpat aliquam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam arcu erat, efficitur sed libero non, tempus venenatis nunc.
+		
+	.b-download.container
+		.b-download__title.title-2 Скачайте образец заявления
+		.b-download__items
+			.b-download__item
+				.b-file.bgi
+					.b-file__icon
+					.b-file__name.title-3 ИСК затопление и пожар
+					.b-file__download.link скачать
+			.b-download__item
+				.b-file.bgi
+					.b-file__icon
+					.b-file__name.title-3 ИСК затопление и пожар
+					.b-file__download.link скачать
+			.b-download__item
+				.b-file.bgi
+					.b-file__icon
+					.b-file__name.title-3 ИСК затопление и пожар
+					.b-file__download.link скачать
+			.b-download__item
+				.b-file.bgi
+					.b-file__icon
+					.b-file__name.title-3 ИСК затопление и пожар
+					.b-file__download.link скачать
+			.b-download__item
+				.b-file.bgi
+					.b-file__icon
+					.b-file__name.title-3 ИСК затопление и пожар
+					.b-file__download.link скачать
+			.b-download__item
+				.b-file.bgi
+					.b-file__icon
+					.b-file__name.title-3 ИСК затопление и пожар
+					.b-file__download.link скачать
+	include ./index/articles.pug
+block script
+	script(src="js/slider.js")
+	

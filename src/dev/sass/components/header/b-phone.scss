@@ -1,0 +1,23 @@
+.b-phone {
+	font-size: 14px;
+	text-align: center;
+	line-height: 18px;
+
+	@media (max-width: 1490px) {
+        text-align: left;
+    }
+
+	&--right {
+		text-align: right;
+
+		@include breakpoint($max767) {
+			text-align: center;
+		}
+	}
+	
+	&__number {
+		display: block;
+		font-size: 18px;
+		margin-top: 5px;
+	}
+}

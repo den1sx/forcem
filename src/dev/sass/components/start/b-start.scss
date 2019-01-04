@@ -1,0 +1,67 @@
+.b-start {
+    margin-top: 70px;
+
+    @include breakpoint($mobile) {
+        margin-top: 40px;
+    }
+
+    &__container {
+        position: relative;
+    }
+
+    &__agency {
+		color: $black;
+		padding-left: 40px;	
+		position: relative;	
+
+		@include breakpoint($mobile) {
+	    	padding-left: 25px;
+	    }
+
+		&::after {
+			content: '';
+			position: absolute;	
+			top: 12px;
+			left: 0;
+			width: 30px;
+			height: 2px;	
+			background-color: $red;	
+
+			@include breakpoint($mobile) {
+		    	top: 8px;
+		    	width: 20px;
+		    }
+		}
+    }
+    
+    &__title {
+        margin-top: 5px;
+    }
+
+    &__form {
+        margin-top: 60px;
+
+        @include breakpoint($max1023) {
+            margin-top: 40px;
+        }
+
+        @include breakpoint($max767) {
+            display: none;
+        }
+    }
+
+    &__bg {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        right: 0;
+        width: 383px;
+        height: 0;
+        padding-top: 48%;
+        background-image: url(/img/vener.png);
+
+        @include breakpoint($max1300) {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,105 @@
+.b-hat {
+	width: 100%;
+	height: 340px;
+	background-color: #F1F6F9;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	overflow: hidden;
+
+	&__nobg {
+		background-color: none;
+	}
+
+	&__article {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		display: block;
+		opacity: 0.45;
+	}
+
+	&__layer {
+		background-color: #D4B177;
+		opacity: 0.25;
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		display: block;
+	}
+
+	@include breakpoint($max1300) {
+	    height: 280px;
+	}
+
+	@include breakpoint($max767) {
+	    height: 265px;
+	}
+
+	@include breakpoint($mobile) {
+	    height: 230px;
+	}
+	
+	&__bgi {
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: inherit;
+		opacity: 0.3;
+	}
+	
+	&__pic {
+		width: 17.5%;
+		position: relative;
+		z-index: 1;
+		align-content: flex-start;
+
+		@include breakpoint($max1300) {
+		    width: 20.5%;
+		}
+
+		@include breakpoint($max1023) {
+		    width: 23.5%;
+		}
+
+		@include breakpoint($max767) {
+		    width: 30.5%;
+		}
+
+		@include breakpoint($mobile) {
+		    width: 45%;
+		}
+	}
+
+	&__icon {
+		width: 100%;
+		height: 0;
+		padding-top: 88%;
+		position: absolute;
+		content: '';
+		top: -6vw;
+		left: 0;
+
+		@include breakpoint($mobile) {
+		    top: -10vw;
+		}
+	}
+
+	&__title {
+		z-index: 2;
+		text-align: center;
+	}
+}

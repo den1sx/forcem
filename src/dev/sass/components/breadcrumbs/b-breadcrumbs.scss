@@ -1,0 +1,24 @@
+.b-breadcrumbs {
+	margin-top: 20px;
+	font-size: 14px;
+
+	@include breakpoint($mobile) {
+    	font-size: 12px;
+    }
+
+	&--separator {
+		margin-right: 5px;
+
+		@include breakpoint($mobile) {
+	    	margin-right: 3px;
+	    }
+	}
+
+	&--link {
+		margin-right: 5px;
+
+		@include breakpoint($mobile) {
+	    	margin-right: 3px;
+	    }
+	}
+}

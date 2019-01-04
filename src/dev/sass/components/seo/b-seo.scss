@@ -1,0 +1,17 @@
+.b-seo {
+	margin-top: 60px;
+
+	@include breakpoint($max767) {
+		margin-top: 40px;
+	}
+
+	&__text {
+		margin: 30px auto 0 auto;
+		width: 100%;
+		max-width: 960px;
+
+		@include breakpoint($max767) {
+			margin-top: 20px;
+		}
+	}
+}

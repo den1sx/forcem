@@ -1,0 +1,140 @@
+.b-preview {
+	position: relative;
+
+	&__pic {
+		width: 95%;
+		height: 200px;
+		position: relative;
+
+		@include breakpoint($max767) {
+			width: 100%;
+		}
+
+		@include breakpoint($mobile) {
+			height: 180px;
+		}
+	}
+
+	&__layer {
+		background-color: #D4B177;
+		opacity: 0.1;
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		display: block;
+	}
+
+	&__frame {
+		border: 1px solid $gold;
+		width: 100%;
+		height: 200px;
+		display: inline-block;
+		margin-left: 20px;
+		margin-top: 20px;
+		position: relative;
+
+		@include breakpoint($max767) {
+			margin: 20px;
+			width: calc(100% - 40px);
+			height: 160px;
+		}
+		
+
+		@include breakpoint($mobile) {
+			height: 140px;
+		}
+	}
+
+	&__category {
+		color: #fff;
+		text-transform: uppercase;
+		border-bottom: 1px solid $gold;
+		position: absolute;
+		padding-left: 12px;
+		bottom: 40px;
+		left: 0;
+		z-index: 2;
+
+		@include breakpoint($max767) {
+			bottom: 20px;
+		}
+	}
+
+	&__title {
+		margin-top: 40px;
+
+		@include breakpoint($max1023) {
+			margin-top: 30px;
+		}
+
+		@include breakpoint($max767) {
+			margin-top: 20px;
+		}
+	}
+
+	&__text {
+		margin-top: 20px;
+
+		@include breakpoint($max1023) {
+			margin-top: 15px;
+		}
+
+		@include breakpoint($max767) {
+			margin-top: 10px;
+		}
+	}
+
+	&__epilogue {
+		margin-top: 20px;
+		display: flex;
+		justify-content: space-between;
+
+		@include breakpoint($max1023) {
+			margin-top: 15px;
+		}
+
+		@include breakpoint($mobile) {
+			margin-top: 10px;
+		}
+	}
+
+	&__more {
+		text-transform: uppercase;
+		padding-right: 74px;
+		position: relative;
+		display: inline-block;
+		align-self: flex-end;
+
+		@include breakpoint($mobile) {
+	    	padding-right: 66px;
+	    	margin-top: 20px;
+	    }
+
+		&:hover {
+
+			&::after {
+				right: 7px;
+			}
+		}
+
+		&::after {
+			transition: ease 0.5s;
+			content: '';
+			position: absolute;	
+			top: 12px;
+			right: 0px;
+			width: 54px;
+			height: 2px;	
+			background-color: $red;	
+
+
+			@include breakpoint($mobile) {
+
+		    }
+		}
+	}
+}

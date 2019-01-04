@@ -1,0 +1,99 @@
+.b-popup {
+	z-index: 9999;
+	position: fixed;
+	left: 0;
+	top: 0;
+	opacity: 0;
+  	visibility: hidden;
+  	width: 100%;
+  	height: 100%;
+	background-color: rgba(51,51,51,0.65);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: scroll;
+
+	&--visible {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&__close {
+		display: flex;
+		justify-content: flex-end;
+
+		& svg {
+			width: 14px;
+			height: 14px;
+			fill: $gold;
+			cursor: pointer;
+
+			&:hover {
+				fill: $black;
+			}
+		}
+	}
+}
+
+.b-form {
+
+	&__wrapper {
+		border: 1px solid $gold;
+		padding: 20px;
+		margin: auto;
+		width: 100%;
+		max-width: 650px;
+		background-color: #fff;
+	}
+
+	&__frame {
+		border: 1px solid $gold;
+		padding: 20px;
+		background-color: #fff;
+
+		@include breakpoint($mobile) {
+	    	padding: 10px;
+	    }
+	}
+
+	&__write {
+		margin-top: 20px;
+		color: $blackh;
+	}
+
+	&__input {
+		width: 100%;
+		display: block;
+		border-bottom: 1px solid $black;
+		padding: 10px 0;
+		color: $red;
+
+		&:focus {
+			border-bottom: 1px solid $red;
+		}
+	}
+
+	&__agreement {
+		margin-top: 15px;
+		display: inline-block;
+	}
+
+	&__complete {
+		display: flex;
+		justify-content: space-between;
+
+		@include breakpoint($mobile) {
+	    	flex-direction: column;
+	    	justify-content: flex-start;
+	    	align-items: center;
+	    }
+	}
+
+	&__captcha {
+		margin-top: 15px;
+	}
+
+	&__button {
+		margin-top: 15px;
+	}
+}

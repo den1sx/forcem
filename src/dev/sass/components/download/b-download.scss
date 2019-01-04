@@ -1,0 +1,30 @@
+.b-download {
+	margin-top: 30px;
+
+	&__items {
+		margin-top: 10px;
+		margin-left: -20px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		width: calc(25% - 20px);
+		margin-left: 20px;
+		margin-top: 20px;
+		border: 1px solid $gold;
+		padding: 20px;
+
+		@include breakpoint($max1023) {
+		    width: calc(33.3% - 20px);
+		}
+
+		@include breakpoint($max767) {
+		    width: calc(50% - 20px);
+		}
+
+		@include breakpoint($mobile) {
+		    width: 100%;
+		}
+	}
+}

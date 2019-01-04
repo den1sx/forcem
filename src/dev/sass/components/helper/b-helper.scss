@@ -1,0 +1,141 @@
+.b-helper {
+	margin-top: 60px;
+	display: flex;
+	justify-content: space-between;
+
+	@include breakpoint($max767) {
+		margin-top: 40px;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+
+	&__left {
+		width: 430px;
+		
+		@include breakpoint($max1023) {
+			width: 50%;
+		}
+
+		@include breakpoint($max767) {
+			width: 100%;
+		}
+	}
+
+	&__how {
+		color: $black;
+		padding-left: 40px;	
+		position: relative;	
+
+		@include breakpoint($mobile) {
+	    	padding-left: 25px;
+	    }
+
+		&::after {
+			content: '';
+			position: absolute;	
+			top: 12px;
+			left: 0;
+			width: 30px;
+			height: 2px;	
+			background-color: $red;	
+
+			@include breakpoint($mobile) {
+		    	top: 8px;
+		    	width: 20px;
+		    }
+		}
+	}
+
+	&__title {
+		margin-top: 5px;	
+	}
+
+	&__text {
+		margin-top: 20px;
+	}
+
+	&__right {
+		display: flex;
+		align-items: center;
+
+		@include breakpoint($max1023) {
+			flex-direction: column;
+			width: 40%;
+		}
+
+		@include breakpoint($max767) {
+			width: 100%;
+		}
+	}
+
+	&__pic {
+		width: 215px;
+		height: 215px;
+		border-radius: 50%;
+
+		@include breakpoint($max1300) {
+	    	width: 185px;
+	    	height: 185px;
+	    }
+
+	    @include breakpoint($max1023) {
+			width: 145px;
+			height: 145px;
+		}
+
+		@include breakpoint($max767) {
+			margin-top: 15px;
+			width: 215px;
+			height: 215px;
+		}
+	}
+
+	&__quote {
+		margin-left: 60px;
+		width: 287px;
+		display: flex;
+		justify-content: space-between;
+
+		@include breakpoint($max1300) {
+		    margin-left: 30px;
+		}
+
+		@include breakpoint($max1023) {
+			width: 100%;
+			margin-top: 26px;
+			margin-left: 0;
+		}
+	}
+
+	&__commas {
+		display: block;
+
+		& svg {
+			width: 28px;
+			height: 21px;
+		}
+
+		&--left {
+			margin-top: -8px;
+		}
+
+		&--right {
+			margin-bottom: -8px;
+			display: block;
+			transform: rotate(180deg);
+		}
+	}
+
+	&__said {
+		width: 200px;
+
+		@include breakpoint($max1023) {
+			width: 100%;
+		}
+	}
+
+	&__name {
+		display: block;
+		text-align: right;
+	}
+}

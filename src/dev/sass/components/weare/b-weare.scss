@@ -1,0 +1,153 @@
+.b-we-are {
+	margin-top: 60px;
+	padding: 60px 0 210px 0;
+	background-color: #040F0E;
+	background-image: url(/img/weare.png);
+	background-repeat: no-repeat;
+
+	&--contacts {
+		padding-bottom: 230px;
+	}
+
+	@include breakpoint($max1300) {
+    	padding-bottom: 230px;
+    }
+
+	@include breakpoint($max1023) {
+    	padding: 40px 0;
+    	background-image: none;
+    }
+
+	@include breakpoint($max767) {
+		margin-top: 40px;
+	}
+
+	@include breakpoint($mobile) {
+    	padding: 20px 0 30px 0;
+    }
+
+    &__container {
+    	display: flex;
+    	position: relative;
+
+    	@include breakpoint($max1023) {
+	    	flex-direction: column;
+	    }
+
+	    @include breakpoint($mobile) {
+	    	width: 100%;
+	    	padding: 0;
+	    }
+    }
+
+	&__wrapper {
+		width: 100%;
+		max-width: 980px;
+		padding: 20px;
+		border: 1px solid $gold;
+		background-color: #fff;
+		align-self: flex-start;
+		flex-shrink: 0;
+		background-color: #F1F6F9;
+
+		@include breakpoint($max1023) {
+	    	max-width: 100%;
+	    	padding-bottom: 120px;
+	    }
+
+		&--form {
+			position: absolute;
+			top: 100px;
+			right: 0;
+			width: 100%;
+			max-width: 650px;
+			background-color: #fff;
+
+			@include breakpoint($max1300) {
+		    	max-width: 42%;
+		    	top: 50px;
+		    	right: 15px;
+		    }
+
+		    @include breakpoint($max1023) {
+		    	margin: -110px auto 0 auto;
+		    	position: static;
+		    	max-width: 80%;
+		    	padding-bottom: 20px;
+		    }
+
+		    @include breakpoint($mobile) {
+		    	max-width: 95%;
+		    }
+		}
+
+	    &--contacts {
+	    	top: 40px;
+	    }
+	}
+
+	&__content {
+		padding: 40px;
+		border: 1px solid $gold;
+
+		@include breakpoint($mobile) {
+	    	padding: 20px;
+	    }
+	}
+
+	&__who {
+		color: $black;
+		padding-left: 40px;	
+		position: relative;	
+
+		@include breakpoint($mobile) {
+	    	padding-left: 25px;
+	    }
+
+		&::after {
+			content: '';
+			position: absolute;	
+			top: 12px;
+			left: 0;
+			width: 30px;
+			height: 2px;	
+			background-color: $red;	
+
+			@include breakpoint($mobile) {
+		    	top: 8px;
+		    	width: 20px;
+		    }
+		}
+	}
+
+	&__title {
+		margin-top: 5px;
+	}
+
+	&__text {
+		padding-left: 30px;
+		width: 460px;
+		margin-top: 15px;
+
+		@include breakpoint($max1023) {
+	    	width: 100%;
+	    	padding-left: 0px;
+	    }
+
+	    @include breakpoint($mobile) {
+	    	margin-top: 10px;
+	    }
+	}
+
+	&__link {
+		margin: 10px 0 20px 0;
+		font-size: 24px;
+		line-height: 24px;
+		text-transform: uppercase;
+
+		@include breakpoint($mobile) {
+			font-size: 18px;
+			line-height: 18px;
+		}
+	}
+}

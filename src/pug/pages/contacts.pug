@@ -1,0 +1,41 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Главная страница'
+	- var pageClass = 'index-page';
+
+block content
+	.b-we-are.b-we-are--contacts
+		.b-we-are__container.container
+			.b-we-are__wrapper
+				.b-we-are__content
+					.b-we-are__who.title-3 Как с нами связаться?
+					.b-we-are__title.title-2 Юридические услуги
+					.b-we-are__text 
+						p Вы всегда можете связаться с нами по нашей грячей линии:
+						a(herf="tel:+78008432312").b-we-are__link.link-gold +7 (800) 843-23-12
+						p Или оставить заявку на звонок, заполнив форму обратной связи. Наш менеджер связжется с вами в ближайшее время и ответит на все ваши вопросы.
+			.b-we-are__wrapper.b-we-are__wrapper--form.b-we-are__wrapper--contacts
+				.b-we-are__content
+					.b-form
+						.b-form__title.title-2 Оставьте заявку на звонок прямо сейчас
+						.b-form__write Есть проблема? Пишите. Перезвоним!
+						form.b-form__form
+							input(placeholder="Как к Вам обращаться?").b-form__input
+							input(placeholder="Укажите Ваш телефон?").b-form__input
+							input(placeholder="Укажите e-mail?").b-form__input
+							.b-form__agreement Нажимая на кнопку “Отправить”, вы принимаете 
+								a.link условия пользовательского соглашения
+							.b-form__complete
+								.b-form__captcha captcha
+								.b-form__button.b-button Отправить
+	.b-contacts.container
+		.title-2 Полезная информация
+		.b-contacts__text.b-text.b-text--paste
+			p Любой человек может приобрести у нас сертификат сроком на 3 мес. 6 мес. 9 мес. 12 мес. на оказание юридических услуг, который можно подарить (передать) друзьям, родным, знакомым.Ознакомиться с тем, какие услуги включены  в данные сертификаты, можно ниже.
+		.b-text--paste
+			.b-more
+				.b-more__item.link смотреть полезные телефоны
+block script
+
+	

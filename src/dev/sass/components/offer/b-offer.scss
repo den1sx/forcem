@@ -1,0 +1,90 @@
+.b-offer {
+	margin-top: 60px;
+	display: flex;
+	flex-direction: column;
+
+	@include breakpoint($max767) {
+		margin-top: 40px;
+	}
+
+	&__text {
+		margin-top: 30px;
+		width: 100%;
+		max-width: 780px;
+		line-height: 34px;
+
+		@include breakpoint($max1023) {
+			max-width: 100%;
+			margin-top: 20px;
+	    }
+
+	    @include breakpoint($max767) {
+			line-height: 28px;
+	    }
+	}
+
+	&__items {
+		margin-top: 30px;
+		margin-left: -20px;
+		display: flex;
+
+		@include breakpoint($max1300) {
+			margin-left: -10px;
+	    }
+
+	    @include breakpoint($max1023) {
+			margin-top: 20px;
+	    }
+	}
+
+	&__item {
+		background-image: url(/img/tariff.png);
+		width: calc(25% - 20px);
+		margin-left: 20px;
+		padding: 20px;
+		color: #fff;
+
+		@include breakpoint($max1300) {
+	    	width: calc(25% - 10px);
+			margin-left: 10px;
+	    }
+	}
+
+	&__more {
+		margin-top: 30px;
+		text-transform: uppercase;
+		padding-right: 74px;
+		position: relative;
+		display: block;
+		display: inline-block;
+		align-self: flex-end;
+
+		@include breakpoint($mobile) {
+	    	padding-right: 66px;
+	    	margin-top: 20px;
+	    }
+
+		&:hover {
+
+			&::after {
+				right: 7px;
+			}
+		}
+
+		&::after {
+			transition: ease 0.5s;
+			content: '';
+			position: absolute;	
+			top: 12px;
+			right: 0px;
+			width: 54px;
+			height: 2px;	
+			background-color: $red;	
+
+
+			@include breakpoint($mobile) {
+
+		    }
+		}
+	}
+}

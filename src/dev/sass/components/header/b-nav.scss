@@ -1,0 +1,86 @@
+.b-nav {
+	height: inherit;
+
+	@media (max-width: 1490px) {
+        height: auto;
+        padding: 0 50px;
+    }
+
+	&__items {
+		display: flex;
+		align-items: center;
+		height: inherit;
+
+		@media (max-width: 1490px) {
+	        display: block;
+	    }
+	}
+
+	&__item {
+		margin-left: 40px;
+
+		@media (max-width: 1490px) {
+	        margin-left: 0;
+	        margin-top: 20px;
+	        font-size: 16px;
+	        line-height: 20px;
+	        display: block;
+	    }
+
+		& svg {
+			fill: $gold;
+			width: 24px;
+			height: 24px;
+			transform: rotate(180deg);
+
+			@media (max-width: 1490px) {
+				display: none;
+			}
+		}
+
+		&--sub {
+			position: relative;
+			display: flex;
+			align-items: center;
+			cursor: pointer;
+
+			@media (max-width: 1490px) {
+		        display: block;
+		    }
+		}
+	}
+
+	&__submenu {
+		z-index: 100;
+		position: absolute;
+		display: none;
+		top: 36px;
+		left: -74px;
+		background-color: #fff;
+		width: 288px;
+
+		@media (max-width: 1490px) {
+			font-size: 14px;
+	        position: static;
+	        width: auto;
+	        box-shadow: none;
+	        background-color: transparent;
+	    }
+	}
+
+	&__subitem {
+		display: block;
+		border-bottom: 1px solid $gold;
+		padding: 8px 30px;
+
+		&:last-of-type {
+			border-bottom: none;
+		}
+
+		@media (max-width: 1490px) {
+	        border: none;
+	        margin-top: 10px;
+	        padding: 0 20px;
+	    }
+	}
+}

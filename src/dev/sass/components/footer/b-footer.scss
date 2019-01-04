@@ -1,0 +1,114 @@
+.b-footer {
+	padding: 0 90px;
+	background-color: #040F0E;
+	color: #fff;
+	display: flex;
+	height: 320px;
+	margin-top: 60px;
+	display: flex;
+	justify-content: space-between;
+
+	@include breakpoint($max1023) {
+		padding: 40px 15px;
+		height: auto;
+	}
+
+	@include breakpoint($max767) {
+		margin-top: 40px;
+		justify-content: flex-start;
+		flex-direction: column;
+		align-items: center;
+		padding: 30px 0px;
+	}
+
+	&__left {
+		padding-top: 60px;
+		padding-right: 65px;
+		border-right: 1px solid $gold;
+
+		@include breakpoint($max1023) {
+			padding-right: 0;
+			border: none;
+			padding-top: 0;
+		}
+
+		@include breakpoint($max767) {
+			text-align: center;
+			order: 1;
+			margin-top: 20px;
+			font-size: 14px;
+			line-height: 26px;
+		}
+	}
+
+	&__center {
+		margin-top: 60px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		@include breakpoint($max1023) {
+			margin-top: 0;
+		}
+
+		
+	}
+
+	&__right {
+		padding-top: 60px;
+		padding-left: 65px;
+		border-left: 1px solid $gold;
+		text-align: right;
+
+		@include breakpoint($max1023) {
+			padding-left: 0;
+			border: none;
+			padding-top: 0;
+		}
+
+		@include breakpoint($max767) {
+			text-align: center;
+			margin-top: 20px;
+		}
+	}
+
+	&__help {
+		text-transform: uppercase;
+		padding-bottom: 5px;
+	}
+
+	&__link {
+		display: block;
+	}
+
+	&__agreement {
+		margin-top: 10px;
+		text-decoration: underline;
+	}
+
+	&__icons {
+		margin-top: 20px;
+	}
+
+	&__address {
+		margin-top: 25px;
+	}
+
+	&__logo {
+		width: 120px;
+
+		@include breakpoint($max1023) {
+			width: 72px;
+		}
+	}
+
+	&__name {
+		font-size: 28px;
+		color: $gold;
+		margin-top: 10px;
+
+		@include breakpoint($max1023) {
+			font-size: 22px;
+		}
+	}
+}

@@ -1,0 +1,81 @@
+.b-step {
+
+	@include breakpoint($max767) {
+		display: flex;
+		margin-top: 20px;
+
+		&:first-of-type {
+			margin-top: 0;
+		}
+	}
+
+
+
+	&__number {
+		width: 83px;
+		height: 83px;
+		border-radius: 50%;
+		background-color: $red;
+		color: #fff;
+		font-size: 48px;
+		text-align: center;
+		line-height: 78px;
+
+		@include breakpoint($max767) {
+	    	width: 65px;
+	    	height: 65px;
+	    	font-size: 42px;
+	    	line-height: 60px;
+	    	flex-shrink: 0;
+	    }
+
+	    @include breakpoint($mobile) {
+	    	width: 41px;
+	    	height: 41px;
+	    	font-size: 24px;
+	    	line-height: 40px;
+	    }
+	}
+
+	&__description {
+		margin-top: 30px;
+
+		@include breakpoint($max767) {
+			margin-left: 20px;
+			margin-top: 3px;
+		}
+
+		@include breakpoint($mobile) {
+	    	margin-left: 15px;
+	    }
+	}
+
+
+	&__title {
+		
+	}
+
+	&__text {
+		width: 300px;
+		margin-top: 10px;
+		margin-left: 30px;
+
+		@include breakpoint($max1300) {
+	    	width: 80%;
+	    	margin-left: 10px;
+	    }
+
+	    @include breakpoint($max1023) {
+	    	width: 90%;
+	    	margin-left: 0px;
+	    }
+
+	    @include breakpoint($max767) {
+	    	width: 100%;
+	    }
+
+	    @include breakpoint($mobile) {
+	    	margin-top: 5px;
+	    }
+	}
+}

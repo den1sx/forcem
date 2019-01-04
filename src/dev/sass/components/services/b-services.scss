@@ -1,0 +1,98 @@
+.b-services {
+	margin-top: 60px;
+	width: 100%;
+	padding: 60px 0;
+	background-color: #040F0E;
+	background-image: url(/img/services/shieldbg.png);
+
+	@include breakpoint($max1023) {
+    	padding: 40px 0;
+    	background-image: none;
+    }
+
+    @include breakpoint($max767) {
+    	margin-top: 40px;
+    }
+
+    @include breakpoint($mobile) {
+    	padding: 20px 0 30px 0;
+    }
+
+    &--list {
+    	margin: 0;
+		padding:0;
+		background-color: transparent;
+		background-image: none;
+    }
+
+	&__title {
+		color: #fff;
+
+		&--list {
+			color: $blackh;
+		}
+	}
+
+	&__container {
+		margin: 30px auto 0 auto;
+		position: relative;
+		width: 100%;
+
+		@include breakpoint($max1300) {
+	    	padding: 0 15px;
+	    }
+
+		@include breakpoint($mobile) {
+	    	margin-top: 20px;
+	    }
+
+	}
+
+	&__wrapper {
+		margin: 30px auto 0 auto;
+
+		@include breakpoint($mobile) {
+	    	margin-top: 20px;
+	    }
+	}
+
+	&__items {
+		margin-left: -20px;
+		display: flex;
+
+		&--list {
+			margin-top: -20px;
+			margin-left: -30px;
+			display: flex;
+			flex-wrap: wrap;
+
+			@include breakpoint($max1300) {
+			    margin-left: -20px;
+			}
+		}
+	}
+
+	&__item {
+		margin-left: 20px;
+		margin-top: 20px;
+		width: 380px;
+
+		&--list {
+			margin-left: 30px;
+			width: calc(33.3% - 30px);
+
+			@include breakpoint($max1300) {
+			    margin-left: 20px;
+				width: calc(33.3% - 20px);
+			}
+
+			@include breakpoint($max1023) {
+			    width: calc(50% - 20px);
+			}
+
+			@include breakpoint($max767) {
+			    width: 100%;
+			}
+		}
+	}
+}

@@ -1,0 +1,103 @@
+.b-quality {
+	margin-top: 60px;
+	padding: 60px 0;
+	background-color: #F1F6F9;
+	background-image: url(/img/quality/quality.png);
+	background-repeat: no-repeat;
+
+	@include breakpoint($max1023) {
+    	padding: 40px 0;
+    	background-image: none;
+    }
+
+	@include breakpoint($max767) {
+		margin-top: 40px;
+	}
+
+	@include breakpoint($mobile) {
+    	padding: 20px 0 30px 0;
+    }
+
+    &__container {
+    	display: flex;
+    }
+
+    &__left {
+    	margin-top: 40px;
+
+    	@include breakpoint($max1023) {
+	    	display: none;
+	    }
+    }
+
+    &__number {
+    	width: 440px;
+    	height: 110px;
+    	background-size: cover;
+    	background-repeat: no-repeat;
+    	margin-top: 10px;
+    	font-size: 30px;
+		line-height: 28px;
+		padding-bottom: 3px;
+    	color: #fff;
+    	display: flex;
+    	justify-content: center;
+    	align-items: center;
+    	text-align: center;
+
+    	@include breakpoint($max1300) {
+	    	width: 360px;
+	    	height: 90px;
+	    	font-size: 24px;
+	    	line-height: 26px;
+	    }
+    }
+
+    &__right {
+    	width: 100%;
+    	max-width: 720px;
+    	margin-left: 100px;
+
+    	@include breakpoint($max1300) {
+	    	margin-left: 60px;
+	    }
+
+	    @include breakpoint($max1023) {
+	    	margin-left: 0;
+	    	max-width: 100%;
+	    }
+    }
+
+    &__why {
+		color: $black;
+		padding-left: 40px;	
+		position: relative;	
+
+		@include breakpoint($mobile) {
+	    	padding-left: 25px;
+	    }
+
+		&::after {
+			content: '';
+			position: absolute;	
+			top: 12px;
+			left: 0;
+			width: 30px;
+			height: 2px;	
+			background-color: $red;	
+
+			@include breakpoint($mobile) {
+		    	top: 8px;
+		    	width: 20px;
+		    }
+		}
+	}
+
+	&__text {
+		margin-top: 30px;
+
+		@include breakpoint($max1023) {
+	    	margin-top: 20px;
+	    }
+	}
+}

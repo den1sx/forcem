@@ -1,0 +1,69 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Главная страница'
+	- var pageClass = 'index-page';
+
+block content
+	.b-title.title-1.container Статьи
+	.b-breadcrumbs.container 123
+	.b-news.container
+		form.b-filter
+			label.b-filter__label
+				input(type="radio" name="1").b-filter__input
+				span.b-filter__name Все
+			label.b-filter__label
+				input(type="radio" name="1").b-filter__input
+				span.b-filter__name Долги
+			label.b-filter__label
+				input(type="radio" name="1").b-filter__input
+				span.b-filter__name Алименты
+			label.b-filter__label
+				input(type="radio" name="1").b-filter__input
+				span.b-filter__name Споры
+			label.b-filter__label
+				input(type="radio" name="1").b-filter__input
+				span.b-filter__name Законы
+		.b-text.b-text--paste
+			p Любой человек может приобрести у нас сертификат сроком на 3 мес. 6 мес. 9 мес. 12 мес. на оказание юридических услуг, который можно подарить (передать) друзьям, родным, знакомым.Ознакомиться с тем, какие услуги включены  в данные сертификаты, можно ниже.
+		.b-articles__items.b-articles__items--news
+			.b-articles__item.b-articles__item--news.b-preview
+				.b-preview__pic.bgi(style="background-image: url(img/article.png);")
+					.b-preview__layer
+					.b-preview__frame 
+						span.b-preview__category Долги
+				.b-preview__title.title-3 Алименты и снова алименты, алименты и снова алименты
+				.b-preview__text Налоговые споры. Ревизии. Взыскание долгов. Мошенничество. Плохая новость - это то, что мы делаем лучше всего.
+				.b-preview__epilogue
+					.b-preview__date 10.10.1990
+					a(href="#").b-preview__more.link Подробнее
+			.b-articles__item.b-articles__item--news.b-preview
+				.b-preview__pic.bgi(style="background-image: url(img/article.png);")
+					.b-preview__frame 
+						span.b-preview__category Долги
+				.b-preview__title.title-3 Алименты и снова алименты, алименты и снова алименты
+				.b-preview__text Налоговые споры. Ревизии. Взыскание долгов. Мошенничество. Плохая новость - это то, что мы делаем лучше всего.
+				.b-preview__epilogue
+					.b-preview__date 10.10.1990
+					a(href="#").b-preview__more.link Подробнее
+			.b-articles__item.b-articles__item--news.b-preview
+				.b-preview__pic.bgi(style="background-image: url(img/article.png);")
+					.b-preview__frame 
+						span.b-preview__category Долги
+				.b-preview__title.title-3 Алименты и снова алименты, алименты и снова алименты
+				.b-preview__text Налоговые споры. Ревизии. Взыскание долгов. Мошенничество. Плохая новость - это то, что мы делаем лучше всего.
+				.b-preview__epilogue
+					.b-preview__date 10.10.1990
+					a(href="#").b-preview__more.link Подробнее
+			.b-articles__item.b-articles__item--news.b-preview
+				.b-preview__pic.bgi(style="background-image: url(img/article.png);")
+					.b-preview__frame 
+						span.b-preview__category Долги
+				.b-preview__title.title-3 Алименты и снова алименты, алименты и снова алименты
+				.b-preview__text Налоговые споры. Ревизии. Взыскание долгов. Мошенничество. Плохая новость - это то, что мы делаем лучше всего.
+				.b-preview__epilogue
+					.b-preview__date 10.10.1990
+					a(href="#").b-preview__more.link Подробнее
+block script
+
+	

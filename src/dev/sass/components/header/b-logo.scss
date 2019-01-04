@@ -1,0 +1,42 @@
+.b-logo {
+    display: flex;
+    align-items: center;
+
+    &__img {
+        width: 77px;
+        transition: linear 0.3s;
+
+        @include breakpoint($max1023) {
+            width: 53px;
+        }
+
+        @include breakpoint($max767) {
+            width: 43px;
+        }
+
+        &--shrink {
+            width: 36px;
+        }
+    }
+
+    &__text {
+        color: $gold;
+        font-size: 30px;
+        line-height: 30px;
+        margin-left: 20px;
+
+        &--shrink {
+            display: none;
+        }
+
+        @include breakpoint($max1023) {
+            font-size: 24px;
+            line-height: 24px;
+            margin-left: 10px;
+        }
+
+        @include breakpoint($max767) {
+            display: none;
+        }
+    }
+}

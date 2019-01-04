@@ -1,0 +1,51 @@
+.b-file {
+	border: 1px solid $gold;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+
+	&__icon {
+		width: 89px;
+		height: 111px;
+		background-image: url(/img/file.png);
+		align-self: center;
+	}
+
+	&__name {
+		margin-top: 20px;
+		font-size: 18px;
+	}
+
+	&__download {
+		margin-top: 48px;
+		padding-right: 74px;
+		position: relative;
+		display: inline-block;
+		align-self: flex-end;
+		text-transform: uppercase;
+		color: $blackh;
+
+		@include breakpoint($mobile) {
+	    	padding-right: 66px;
+	    	margin-top: 30px;
+	    }
+
+		&:hover {
+
+			&::after {
+				right: 7px;
+			}
+		}
+
+		&::after {
+			transition: ease 0.5s;
+			content: '';
+			position: absolute;	
+			top: 12px;
+			right: 0px;
+			width: 54px;
+			height: 2px;	
+			background-color: $red;	
+		}
+	}
+}

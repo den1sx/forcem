@@ -1,0 +1,31 @@
+include ../mixins
+header.b-header
+	.b-header__wrapper
+		.b-header__items
+			.b-header__left
+				a(href="/").b-logo
+					img(src="img/logo.png" alt="Форс Мажор").b-logo__img
+					.b-logo__text Форс<br>Мажоры
+			.b-header__mid
+				.b-header__close
+					+svg('cross')
+				nav.b-nav
+					.b-nav__items
+						a(href="#").b-nav__item.link Главная
+						a(href="#").b-nav__item.link Услуги
+						a(href="#").b-nav__item.link Статьи
+						a(href="#").b-nav__item.link Команда
+						.b-nav__item.b-nav__item--sub Акции и предложения
+							+svg('mini-arrow')
+							.b-nav__submenu.b-shadow
+								a(href="#").b-nav__subitem.link Сертификаты
+								a(href="#").b-nav__subitem.link Коммерческое предложение
+						a(href="#").b-nav__item.link Контакты
+				.b-header__right
+					.b-header__info
+						.b-phone
+							.b-phone__text Горячая линия
+							a(href="tel:+78008432312").b-phone__number.link-gold +7 (800) 843-23-12
+					a.b-header__button.b-button бесплатная <br>консультация
+			.b-header__menu
+				+svg('menu')

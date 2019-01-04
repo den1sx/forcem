@@ -1,0 +1,63 @@
+.b-filter {
+	margin-left: -44px;
+
+	@include breakpoint($max620) {
+		margin-left: -20px;
+	}
+
+	@include breakpoint($mobile) {
+		margin-top: -22px;
+	}
+
+	&__label {
+		margin-left: 44px;
+		cursor: pointer;
+
+		@include breakpoint($max620) {
+			margin-left: 20px;
+		}
+
+		@include breakpoint($mobile) {
+			margin-top: 22px;
+			display: inline-block;
+		}
+
+		input {
+			display: none;
+
+			&:checked + .b-filter__name {
+				background: rgba(0, 0, 0, 0.5);
+				color: #fff !important;
+				
+				&::after {
+					content: '';
+					position: absolute;
+					bottom: 9px;
+					left: 0;
+					width: 100%;
+					height: 1px;
+					background-color: $gold;
+				}
+				
+			}
+		}
+	}
+
+	&__name {
+		text-transform: uppercase;
+		color: $blackh;
+		padding: 12px;
+		position: relative;
+
+		@include breakpoint($max620) {
+			font-size: 14px;
+			width: 100%;
+		}
+
+		@include breakpoint($mobile) {
+			
+		}
+	}
+}
+
+ 

@@ -1,0 +1,325 @@
+@import "./node_modules/breakpoint-sass/stylesheets/_breakpoint.scss";
+@import "./normalize.scss";
+@import "./colors.scss";
+@import "./media.scss";
+@import "./fonts.scss";
+@import "./libs/libs.scss";
+
+.g-recaptcha {
+
+  & iframe {
+    width: 100% !important;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  outline: none !important;
+}
+
+html {
+  height: 100%;
+  min-width: 320px;
+  overflow-x: hidden;
+  font-size: 16px;
+  line-height: 25px;  
+
+  @include breakpoint($max767) {
+    font-size: 16px;
+  }
+
+  @include breakpoint($mobile) {
+    font-size: 14px;
+  }
+
+  &.locked {
+    overflow-y: hidden;
+  }
+}
+
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  color: $black;
+  font-weight: 400;
+  overflow: hidden;
+}
+
+
+.container {
+  width: 100%;
+  max-width: 1260px;
+  margin: auto;
+  padding: 0 40px;
+
+ 
+  @include breakpoint($max1023) {
+    padding: 0 15px;
+  }
+}
+
+
+.bgi {
+  background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+a {
+  display: inline;
+  color: inherit;
+  text-decoration: none;
+}
+
+.clearfix::after,
+.clearfix::before {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+[aria-disabled="true"] {
+  background-color: transparent;
+
+  & svg {
+    fill: $gold;
+  }
+}
+
+[aria-disabled="false"] {
+  background-color: $gold;
+}
+
+.hidden {
+  display: none;
+}
+
+.b-button {
+  flex-shrink: 0;
+  width: 175px;
+  height: 63px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $red;
+  color: #fff;
+  font-size: 16px;
+  line-height: 20px;
+  transition: linear 0.09s;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #7E0705;
+  }
+}
+
+.b-more {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint($mobile) {
+    margin-top: 20px;
+  }
+
+  &__item {
+    padding-right: 74px;
+    position: relative;
+    display: inline-block;
+    align-self: flex-end;
+    text-transform: uppercase;
+    color: $blackh;
+
+    @include breakpoint($mobile) {
+        padding-right: 66px;
+    }
+
+    &:hover {
+
+      &::after {
+        right: 7px;
+      }
+    }
+
+    &::after {
+      transition: ease 0.5s;
+      content: '';
+      position: absolute; 
+      top: 12px;
+      right: 0px;
+      width: 54px;
+      height: 2px;  
+      background-color: $red; 
+
+
+      @include breakpoint($mobile) {
+
+        }
+    }
+  }
+}
+
+.link {
+  display: inline-block;
+  transition: linear 0.09s;
+  cursor: pointer;
+
+  &:hover {
+    color: $gold;
+  }
+}
+
+.link-gold {
+  display: inline-block;
+  color: $gold;
+  transition: linear 0.09s;
+  cursor: pointer;
+
+  &:hover {
+    color: $red;
+  }
+}
+
+.b-title {
+  margin-top: 60px;
+
+    @include breakpoint($max767) {
+      margin-top: 40px;
+    }
+}
+
+.title-1 {
+  font-size: 68px;
+  line-height: 64px;
+
+  color: $blackh;
+
+  @include breakpoint($max1023) {
+    font-size: 52px;
+    line-height: 48px;
+  }
+
+  @include breakpoint($max767) {
+    font-size: 58px;
+    line-height: 66px;
+  }
+
+  @include breakpoint($mobile) {
+    font-size: 34px;
+    line-height: 40px;
+  }
+}
+
+.title-2 {
+  font-size: 40px;
+  line-height: 40px;
+  color: $blackh;
+
+  @include breakpoint($max1023) {
+    font-size: 36px;
+    line-height: 43px;
+  }
+
+  @include breakpoint($mobile) {
+    font-size: 28px;
+    line-height: 28px;
+  }
+}
+
+.title-3 {
+  font-size: 24px;
+  line-height: 24px;
+  color: $blackh;
+
+  @include breakpoint($mobile) {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+.title-4 {
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: $blackh;
+
+  @include breakpoint($mobile) {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+.b-svg {
+  width: auto;
+  height: auto;
+}
+
+.b-shadow {
+  box-shadow: 0px 5px 15px rgba(51, 51, 51, 0.25);
+}
+
+
+@import "./components/header/b-header.scss";
+@import "./components/header/b-logo.scss";
+@import "./components/header/b-nav.scss";
+@import "./components/header/b-phone.scss";
+@import "./components/start/b-start.scss";
+@import "./components/start/b-write.scss";
+@import "./components/services/b-services.scss";
+@import "./components/services/b-service.scss";
+@import "./components/pagination/b-pagination.scss";
+@import "./components/helper/b-helper.scss";
+@import "./components/steps/b-steps.scss";
+@import "./components/steps/b-step.scss";
+@import "./components/weare/b-weare.scss";
+@import "./components/form/b-form.scss";
+@import "./components/quality/b-quality.scss";
+@import "./components/offer/b-offer.scss";
+@import "./components/offer/b-tariff.scss";
+@import "./components/articles/b-articles.scss";
+@import "./components/articles/b-preview.scss";
+@import "./components/seo/b-seo.scss";
+@import "./components/footer/b-footer.scss";
+@import "./components/icons/b-icons.scss";
+@import "./components/svg/svg.scss";
+@import "./components/breadcrumbs/b-breadcrumbs.scss";
+@import "./components/hat/b-hat.scss";
+@import "./components/category/b-category.scss";
+@import "./components/category/b-card.scss";
+@import "./components/text/b-text.scss";
+@import "./components/download/b-download.scss";
+@import "./components/download/b-file.scss";
+@import "./components/news/b-news.scss";
+@import "./components/news/b-filter.scss";
+@import "./components/contacts/b-contacts.scss";
+@import "./components/members/b-members.scss";
+@import "./components/members/b-member.scss";
+
+
+
+
+

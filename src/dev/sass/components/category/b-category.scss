@@ -1,0 +1,35 @@
+.b-category {
+	margin-top: 60px;
+
+	@include breakpoint($max767) {
+		margin-top: 40px;
+	}
+
+	&__items {
+		margin-top: -20px;
+		margin-left: -20px;
+		display: flex;
+		flex-wrap: wrap;
+
+		@include breakpoint($max1023) {
+			margin-left: 0;
+		}
+	}
+
+	&__item {
+		width: calc(50% - 20px);
+		margin-left: 20px;
+		margin-top: 20px;
+		padding: 30px;
+		background-image: url(/img/card.png);
+
+		@include breakpoint($max1023) {
+			width: 80%;
+			margin: 20px auto 0 auto;
+		}
+
+		@include breakpoint($max767) {
+			width: 100%;
+		}
+	}
+}

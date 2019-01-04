@@ -1,0 +1,51 @@
+.b-steps {
+	margin-top: 60px;
+
+	@include breakpoint($max767) {
+		margin-top: 40px;
+	}
+
+	&__items {
+		display: flex;
+		position: relative;
+		justify-content: space-between;
+
+		@include breakpoint($max767) {
+	    	justify-content: flex-start;
+	    	flex-direction: column;
+	    }
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 41px;
+			left: 0;
+			width: 75%;
+			height: 1px;
+			background-image: linear-gradient(90deg, $black, $black 75%, transparent 75%, transparent 100%);
+			background-size: 10px 5px;
+			border: none;
+			z-index: -1;
+
+			@include breakpoint($max767) {
+				top: 1px;
+				left: 32px;
+		    	width: 1px;
+		    	height: 75%;
+		    	background-image: linear-gradient(180deg, $black, $black 75%, transparent 75%, transparent 100%);
+		    }
+
+		    @include breakpoint($max767) {
+				left: 20px;
+		    	width: 1px;
+		    }
+		}
+	}
+
+	&__item {
+
+		&:first-of-type {
+			margin-left: 0;
+		}
+	}
+}

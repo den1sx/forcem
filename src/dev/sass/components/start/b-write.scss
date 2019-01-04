@@ -1,0 +1,57 @@
+.b-write {
+    width: 100%;
+    max-width: 705px;
+
+    &__label {
+        margin-top: 20px;
+        display: flex;
+
+        &--textarea {
+            display: block;
+        }
+
+        &--afterta {
+            margin-top: 10px;
+        }
+      
+    }
+
+    &__text {
+        flex-shrink: 0;
+    }
+    
+    &__input {
+        margin-left: 15px;
+        border-bottom: 1px solid $gold;
+
+        &:focus {
+            border-color: $red;
+        }
+    }
+
+    &__textarea {
+        margin-top: -5px;
+        width: 100%;
+        display: block;
+        font-size: 18px;
+        color:$black;
+        overflow: hidden;
+        line-height: 52px;
+        background-image: linear-gradient(to bottom, transparent, transparent 51px,$gold 0);
+        background-size: 100% 52px;
+        background-repeat: repeat-y;
+        background-color: transparent;
+        border: none;
+        resize: none;
+
+        &:focus {
+            background-image: linear-gradient(to bottom, transparent, transparent 51px,$red 0);
+        }
+    }
+
+    &__complete {
+        margin-top: 40px;
+        display: flex;
+    }
+
+}

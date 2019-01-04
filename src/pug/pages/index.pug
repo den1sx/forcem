@@ -1,0 +1,38 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Главная страница'
+	- var pageClass = 'index-page';
+
+block content
+	
+	include ./index/start.pug
+	include ./index/services.pug
+	include ./index/helper.pug
+	include ./index/steps.pug
+	include ./index/weare.pug
+	include ./index/quality.pug
+	include ./index/members.pug
+	include ./index/offer.pug
+	include ./index/articles.pug
+	include ./index/seo.pug
+	.b-popup
+		.b-form
+			.b-form__frame
+				.b-form__wrapper
+					.b-popup__close
+						+svg('cross')
+					.b-form__title.title-2 Оставьте заявку на звонок прямо сейчас
+					.b-form__write Есть проблема? Пишите. Перезвоним!
+					form.b-form__form
+						input(placeholder="Как к Вам обращаться?").b-form__input
+						input(placeholder="Укажите Ваш телефон?").b-form__input
+						input(placeholder="Укажите e-mail?").b-form__input
+						.b-form__agreement Нажимая на кнопку “Отправить”, вы принимаете 
+							a.link условия пользовательского соглашения
+						.b-form__complete
+							.b-form__captcha captcha
+							.b-form__button.b-button Отправить
+block script
+	script(src="js/slider.js")
+	

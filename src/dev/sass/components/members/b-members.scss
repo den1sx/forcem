@@ -1,0 +1,17 @@
+.b-members {
+    margin-top: 60px;
+
+	@include breakpoint($max767) {
+		margin-top: 40px;
+    }
+    
+    &__items {
+        margin-top: 30px;
+        margin-left: -20px;
+    }
+
+    &__item {
+        margin-left: 20px;
+        width: calc(20% - 20px);
+    }
+}

@@ -1,0 +1,31 @@
+.b-contacts {
+	margin-top: 60px;
+
+	@include breakpoint($max767) {
+		margin-top: 40px;
+	}
+
+	&__subtitle {
+		margin-top: 25px;
+
+		@include breakpoint($max767) {
+			margin-top: 20px;
+		}
+	}
+
+	&__text {
+		margin-top: 10px;
+	}
+
+	&__info {
+		margin-top: 25px;
+
+		@include breakpoint($max767) {
+			margin-top: 15px;
+		}
+	}
+
+	&__more {
+
+	}
+}

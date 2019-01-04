@@ -1,0 +1,43 @@
+.b-articles {
+	margin-top: 60px;
+
+	@include breakpoint($max767) {
+		margin-top: 40px;
+	}
+
+	&__items {
+		margin-left: -30px;
+		display: flex;
+
+		@include breakpoint($max767) {
+			margin-left: -20px;
+		}
+
+		&--news {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__item {
+		width: calc(33.3% - 30px);
+		margin-left: 30px;
+		margin-top: 30px;
+
+		@include breakpoint($max767) {
+			width: calc(50% - 20px);
+			margin-top: 20px;
+			margin-left: 20px;
+		}
+
+		&--news {
+			@include breakpoint($max1023) {
+				width: calc(50% - 30px);
+			}
+			
+
+			@include breakpoint($max620) {
+				width: 100%;
+			}
+		}
+	}
+}

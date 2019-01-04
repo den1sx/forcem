@@ -1,0 +1,21 @@
+.b-icons {
+	margin-right: -20px;
+	
+	&__item {
+		margin-right: 20px;
+		
+		& svg {
+			fill: #fff;
+			width: 20px;
+			height: 20px;
+			transition: linear 0.09s;
+		}
+
+		&:hover {
+
+			& svg {
+				fill: $gold;
+			}
+		}
+	}
+}
